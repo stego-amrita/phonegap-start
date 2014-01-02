@@ -22,7 +22,7 @@ var importImage = function(e) {
 
     reader.onload = function(event) {
         // set the preview
-        document.getElementById('preview').style.display = 'block';
+        document.getElementById('preview').style.display = 'run-in';
         document.getElementById('preview').src = event.target.result;
 
         // wipe all the fields clean
