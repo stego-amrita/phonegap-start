@@ -24,6 +24,7 @@ var importImage = function(e) {
         // set the preview
         document.getElementById('preview').style.display = 'run-in';
         document.getElementById('preview').src = event.target.result;
+        alert(event.target.result);
 
         // wipe all the fields clean
         document.getElementById('message').value = '';
