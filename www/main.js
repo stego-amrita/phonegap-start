@@ -81,8 +81,13 @@ var encode = function() {
     ctx.putImageData(imgData, 0, 0);
 
     // view the new image
-    alert('Done! When the image appears, save and share it with someone.');
-    window.location = canvas.toDataURL();
+    alert('Done! Save the image and share');
+    // window.location = canvas.toDataURL();
+    var image1 = canvas.toDataURL("image/png").replace("image/png", "image/octet-stream");  
+    window.location.href=image1; 
+
+
+    
 };
 
 
