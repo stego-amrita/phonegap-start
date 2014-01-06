@@ -11,6 +11,7 @@
     <description>
         2014 Test app
     </description>
+    <plugin name="CanvasPlugin" value="org.apache.cordova.plugin.CanvasPlugin"/>
 
        <!--
         Enable individual API permissions here.
