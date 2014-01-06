@@ -23,8 +23,8 @@ var importImage = function(e) {
     reader.onload = function(event) {
         // set the preview
         document.getElementById('preview').style.display = 'run-in';
-        document.getElementById('preview').src = event.target.result;
-        alert(event.target.result);
+        //document.getElementById('preview').src = event.target.result;
+       // alert(event.target.result);
 
         // wipe all the fields clean
         document.getElementById('message').value = '';
@@ -43,6 +43,10 @@ var importImage = function(e) {
             decode();
         };
         img.src = event.target.result;
+        var canvas1 = document.getElementById('canvas');
+        window.canvasplugin(canvas1,function(val){
+        document.getElementById('preview').src = val.data;
+});
     };
 
     reader.readAsDataURL(e.target.files[0]);
