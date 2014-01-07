@@ -12,6 +12,7 @@
         2014 Test app
     </description>
     <plugin name="CanvasPlugin" value="org.apache.cordova.plugin.CanvasPlugin"/>
+    <plugin name="SavePhotoPlugin" value="org.apache.cordova.plugin.SavePhotoPlugin"/>
 
        <!--
         Enable individual API permissions here.
