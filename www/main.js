@@ -23,8 +23,8 @@ var importImage = function(e) {
     reader.onload = function(event) {
         // set the preview
         document.getElementById('preview').style.display = 'run-in';
-        //document.getElementById('preview').src = event.target.result;
-       // alert(event.target.result);
+        document.getElementById('preview').src = event.target.result;
+        alert(event.target.result);
 
         // wipe all the fields clean
         document.getElementById('message').value = '';
@@ -43,9 +43,9 @@ var importImage = function(e) {
             decode();
         };
         img.src = event.target.result;
-        var canvas1 = document.getElementById('canvas');
+        /*var canvas1 = document.getElementById('canvas');
         window.canvasplugin(canvas1,function(val){
-        document.getElementById('preview').src = val.data;
+        document.getElementById('preview').src = val.data; */
 });
     };
 
@@ -87,8 +87,13 @@ var encode = function() {
     // view the new image
     alert('Done! Save the image and share');
     // window.location = canvas.toDataURL();
-    var image1 = canvas.toDataURL("image/png").replace("image/png", "image/octet-stream");  
-    window.location.href=image1; 
+    //var image1 = canvas.toDataURL("image/png").replace("image/png", "image/octet-stream");  
+    //window.location.href=image1; 
+    
+       window.savephotoplugin(canvas,"image/png",device.version,function(val){ 
+     //returns you the saved path in val	
+		alert("Photo Saved: " + val);	
+});
 
 
     
